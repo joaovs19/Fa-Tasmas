@@ -1,8 +1,6 @@
-
-
-.container-fluid{
+.container-fluid {
   min-height: 100vh;
-  background: #FFFFFF;
+  background: #ffffff;
   z-index: 1;
 }
 
@@ -25,7 +23,7 @@
   position: relative;
 }
 
-.imgHamburguer{
+.imgHamburguer {
   cursor: pointer;
   width: 45px;
   height: 47px;
@@ -42,10 +40,10 @@
   right: -250px; /* Inicialmente o menu está oculto à direita */
   width: 250px;
   height: 100%;
-  background-color: #2b2b2b;
+  background: linear-gradient(180deg, #b9ac3c 0%, #e4e1c7 100%);
+
   transition: right 0.3s ease; /* Transição suave para abrir/fechar */
   z-index: 98;
-  padding: 20px;
 }
 
 .sidebar.open {
@@ -53,18 +51,47 @@
 }
 
 .sidebar ul {
+  display: flex;
+  flex-direction: column;
+
   list-style-type: none;
-  padding: 0;
+  padding-top: 100px;
+
+  gap: 15px;
 }
 
 .sidebar ul li {
-  color: white;
-  padding: 10px 0;
+  color: #2b2b2b;
   cursor: pointer;
+
+  padding-left: 20px;
+
+  font-size: larger;
 }
 
-.mat-icon{
-  color: #FFFFFF;
+.sidebar img.arrowLeft {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+  
+  height: 30px;
+  width: 30px;
+
+  opacity: 50%;
+}
+
+.sidebar img.fantasminha2 {
+  position: relative;
+
+  bottom: -30px;
+  width: 250px;
+  height: 250px;
+
+  opacity: 50%;
+}
+
+.mat-icon {
+  color: #ffffff;
 }
 
 .texto {
@@ -75,6 +102,6 @@
 }
 
 .texto h3 {
-  color: #FFFFFF; /* Cor do texto */
+  color: #ffffff; /* Cor do texto */
   font-size: 2rem; /* Ajuste do tamanho do texto */
 }
