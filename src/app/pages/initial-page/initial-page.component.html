@@ -4,12 +4,23 @@
     <img src="../../../assets/List.svg" alt="" class="img-fluid imgHamburguer float-end" (click)="toggleMenu()">
 
   <div class="texto">
-    <h3>seja bem-vindo</h3>
+    <div class="texto-container">
+      <h2 class="texto-sombra">seja bem-vindo</h2>
+      <span>RICARDO</span>
+    </div>
+    <div class="fantasma-container">
+      <img src="../../../assets/fantasmaPerfilLogado.svg" alt="Fantasma" class="img-fluid  fantasma">
+    </div>
   </div>
-  <!-- Conteúdo do container-fluid -->
-   <!-- Menu Lateral -->
+
+  <button class="btn btn-lg ms-4 p-1 btnPulseira" >
+    CARREGUE SUA PULSEIRA
+  </button>
+
+  <h2 class="float-end text-center jaini pe-2">50 <br> pontos</h2>
+
   <div class="sidebar" [ngClass]="{'open': isMenuOpen}">
-    <!-- Adicione conteúdo do menu aqui -->
+
     <ul class="list-unstyled">
       <li>Item 1</li>
       <li>Item 2</li>
@@ -17,7 +28,32 @@
     </ul>
   </div>
 
-</div>
 
+  </div>
 
+  <div class="button-group mt-5">
+    <button class="btn btnOption">Planos</button>
+    <button class="btn btnOption">Produtos</button>
+    <button class="btn btnOption">Ranking</button>
+    <button class="btn btnOption">Apostas</button>
+    <button class="btn btnOption">Indique</button>
+    <button class="btn btnOption">Caça</button>
+  </div>
+
+  <span class="conquistas">Suas conquistas</span>
+
+  <div class="container">
+      <div class="group-image">
+        <img src="../../../assets/Operario.svg" alt="" class=" imgContent">
+        <img src="../../../assets/futebollaço.svg" alt="" class=" imgContent">
+        <img src="../../../assets/duplofantasma.svg" alt="" class=" imgContent">
+        <img src="../../../assets/Operario.svg" alt="" class=" imgContent">
+        <img src="../../../assets/Operario.svg" alt="" class=" imgContent">
+        <img src="../../../assets/Operario.svg" alt="" class=" imgContent">
+      </div>
+  </div>
+
+  <div class="rodape">
+    <p class="text-white text-center mb-0">SLIDE DE PROMOÇÕES E EVENTOS</p>
+  </div>
 </div>

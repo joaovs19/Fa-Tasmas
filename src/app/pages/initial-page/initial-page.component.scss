@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=League+Spartan:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.jaini{
+  font-family: "Jaini", system-ui;
+}
+
+.texto-sombra {
+  color: #FFFFFF; /* Cor principal do texto */
+  text-shadow: 0px 8px 0 #a3a3a3;  /* Cor do texto, ajuste conforme necessário */
+}
 
 .container-fluid{
-  min-height: 100vh;
+  max-height: 100vh;
   background: #FFFFFF;
   z-index: 1;
 }
@@ -30,10 +47,11 @@
   width: 45px;
   height: 47px;
   justify-content: end;
-  position: fixed;
+  position: absolute;
   right: 4px;
-  top: 4px;
+  top: -30px;
   z-index: 99;
+
 }
 
 .sidebar {
@@ -70,11 +88,139 @@
 .texto {
   z-index: 3; /* Coloca o texto acima do menu e da sobreposição */
   position: relative; /* Necessário para garantir que o z-index funcione */
-  margin-top: 20%; /* Ajuste para que o texto não fique colado no topo */
+  margin-top: 10%; /* Ajuste para que o texto não fique colado no topo */
   text-align: center;
 }
 
-.texto h3 {
+.texto h2 {
   color: #FFFFFF; /* Cor do texto */
   font-size: 2rem; /* Ajuste do tamanho do texto */
+}
+
+span{
+  color: #FFFFFF;
+  font-size: 44px;
+  font-family: "League Spartan", sans-serif;
+}
+.fantasma-container {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100%;
+  z-index: 5;
+}
+
+.fantasma {
+  width: 50px; /* Tamanho da imagem, ajuste conforme necessário */
+  margin-left: 30px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+.texto-container {
+  display: inline-block; /* Permite que o texto se alinhe ao lado da imagem */
+  text-transform: uppercase;
+}
+
+h2{
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+.button-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  flex: 0 0 calc(50% - 10px); /* Cada botão ocupará 50% da largura, com um espaço de 10px entre eles */
+  box-sizing: border-box; /* Garante que o espaçamento seja levado em conta no cálculo da largura */
+  text-transform: uppercase;
+}
+
+.btnOption{
+  padding: 20px;
+  border: 2px solid #2b2b2b;
+  margin: 0 auto;
+  border-radius: 15px;
+  font-size: 26px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
+.conquistas{
+  color: #000000;
+  font-size: 28px;
+  margin-left: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+
+.container {
+  display: flex; /* Organiza as imagens em linha */
+  overflow: hidden; /* Oculta as imagens que estão fora da área visível */
+}
+
+.container img {
+  width: 100%; /* Garante que as imagens ocupem o mesmo espaço */
+  flex: 0 0 25%; /* Faz cada imagem ocupar 25% da largura do contêiner (4 imagens por linha) */
+  transition: transform 0.5s ease; /* Transição suave para o efeito de deslizar */
+}
+
+.group-image{
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  padding: 3px;
+  z-index: 0;
+}
+
+.imgContent {
+  border-radius: 15px;
+  margin-left: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  margin-right: 8px;
+  width: 100px;
+  height: 100px;
+}
+
+::-webkit-scrollbar { overflow-y:hidden; }
+/* Conteúdo principal da página */
+.content {
+  flex: 1; /* Ocupa o espaço restante */
+  padding: 80px; /* Adicione padding conforme necessário */
+  bottom: -20;
+  top: 20px;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Ocupa toda a largura da página */
+  position: absolute; /* Fixa o rodapé na parte inferior da página */
+  bottom: 0; /* Posiciona no fundo da página */
+  left: 0;
+  height: 180px; /* Define uma altura maior para o rodapé */
+  top: 670px;
+  z-index: 0;
+}
+
+.btnPulseira{
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: #AFA42E;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 264px;
 }

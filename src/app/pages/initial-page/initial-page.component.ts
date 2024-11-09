@@ -5,7 +5,7 @@ import { MatIcon } from '@angular/material/icon';
 @Component({
   selector: 'app-initial-page',
   standalone: true,
-  imports: [NgIf, CommonModule, MatIcon ],
+  imports: [NgIf, CommonModule, MatIcon, ],
   templateUrl: './initial-page.component.html',
   styleUrl: './initial-page.component.scss'
 })
@@ -32,5 +32,6 @@ export class InitialPageComponent {
     }
   }
 
+  
 
 }
