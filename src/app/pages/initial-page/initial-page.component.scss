@@ -1,0 +1,56 @@
+.container-fluid{
+  min-height: 100vh;
+  background: #FFFFFF;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: #2b2b2b; /* Cor da sobreposição com opacidade */
+  z-index: 2; /* Coloca a sobreposição acima do container-fluid */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.header {
+  background-color: #2b2b2b;
+  height: 20%;
+  z-index: 2;
+  position: relative;
+}
+
+.imgHamburguer{
+  cursor: pointer;
+  width: 30px;
+  justify-content: end;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Inicialmente o menu está oculto à direita */
+  width: 250px;
+  height: 100%;
+  background-color: #2b2b2b;
+  transition: right 0.3s ease; /* Transição suave para abrir/fechar */
+  z-index: 3;
+  padding: 20px;
+}
+
+.sidebar.open {
+  right: 0; /* Quando o menu for aberto, ele aparece à direita */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  color: white;
+  padding: 10px 0;
+  cursor: pointer;
+}
