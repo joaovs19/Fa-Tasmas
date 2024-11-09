@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid{
+  min-height: 100vh;
+  background: radial-gradient(circle, #FFFFFF 17%, #A1A1A1 78%, #828282 100%);
+}
+
+.body-content{
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1140px;
+  display: flex;
+  background-image: url(../../../assets/logoOperario.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100%) center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.login-title {
+  font-family: "Jaini", system-ui;
+  font-weight: 400;
+  font-size: 96px;
+  text-align: center;
+  top: 2px;
+}
+
+.login-subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px; /* Espaço entre o título e o subtítulo */
+  color: #555555;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column; /* Organiza o label acima do input */
+  margin-top: 20px; /* Espaço entre o formulário e outros elementos */
+  width: 100%;
+  max-width: 300px; /* Define uma largura máxima */
+}
+
+.form-label {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px; /* Espaço entre a label e o input */
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-control:focus{
+  border-color: #000000; /* Define a cor da borda quando o campo está em foco */
+  box-shadow: none; /* Remove o efeito de sombra azul */
+  outline: none;
+}
+
+a{
+  color: #000000;
+}
+
+.btn{
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+.help-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.fantasma-img {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 38px; /* Ajuste o tamanho conforme necessário */
+  height: 41px;
+}
