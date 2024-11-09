@@ -1,46 +1,72 @@
 <div class="container d-flex flex-column align-items-center p-3">
-    <!-- Pontuação e Ícone -->
-    <div class="text-center mb-3">
-      <p class="fw-bold">VOCÊ TEM:</p>
-      <div class="icon-circle bg-light rounded-circle d-flex align-items-center justify-content-center  border border-dark" style="width: 80px; height: 80px;">
-        <img src="assets/fantasminha2.svg" alt="Ícone Fantasma" style="width: 50px; height: 50px;">
-      </div>
-      <p class="fs-2 m-0">50</p>
-      <p class="text-muted">pontos</p>
+  <!-- Pontuação e Ícone -->
+  <div class="text-center mb-3">
+    <p class="fw-bold">VOCÊ TEM:</p>
+    <div class="icon-circle bg-light rounded-circle d-flex align-items-center justify-content-center border border-dark" style="width: 80px; height: 80px;">
+      <img src="assets/fantasminha2.svg" alt="Ícone Fantasma" style="width: 50px; height: 50px;">
     </div>
-  
-    <!-- Mensagem de Incentivo -->
-    <div class="info-box p-3 mb-3 text-center bg-light rounded shadow">
-      <p class="fw-bold">AUMENTE SEUS PONTOS</p>
-      <p>Torcedor! Para você ganhar novos descontos e ser fiel ao seu time você precisa acumular novos fantasmas.</p>
-      <button class="btn btn-dark btn-sm">SAIBA COMO</button>
-    </div>
-  
-    <!-- Jogo ao Vivo -->
-    <div class="live-game text-center mb-3">
-        <p class="fw-bold mb-1">JOGO ROLANDO <span class="badge bg-danger">AO VIVO</span></p>
-        <div class="d-flex align-items-center justify-content-center">
-          <button class="arrow-btn btn btn-sm me-2">&lt;</button>
-          <div class="score-box px-4 py-2 bg-light rounded">285 x 55</div>
-          <button class="arrow-btn btn btn-sm ms-2">&gt;</button>
-        </div>
-        <p>Dez</p>
-      </div>
-      
-  
-    <!-- Botões de Ações -->
-    <div class="d-flex mb-3">
-        <button class="btn btn-dark me-2 w-50">EU FUI!</button>
-        <button class="btn btn-warning w-50">ACESSE O INGRESSO</button>
-      </div>
-      
-  
-   
-    
+    <p class="fs-2 m-0">50</p>
+    <p class="text-muted">pontos</p>
   </div>
-   <!-- Slide de Promoções e Eventos -->
-   <footer class="w-100 bg-dark text-white text-center d-flex justify-content-center align-items-center" style="height: 80px;">
-    SLIDE DE PROMOÇÕES E EVENTOS
-  </footer>
-  
-  
+
+  <!-- Mensagem de Incentivo -->
+  <div class="info-box p-3 mb-3 text-center bg-light rounded shadow">
+    <p class="fw-bold">AUMENTE SEUS PONTOS</p>
+    <p>Torcedor! Para você ganhar novos descontos e ser fiel ao seu time você precisa acumular novos fantasmas.</p>
+    <button class="btn btn-dark btn-sm">SAIBA COMO</button>
+  </div>
+
+  <!-- Jogo ao Vivo -->
+  <div class="live-game text-center mb-3">
+    <p class="fw-bold mb-1">
+      JOGO ROLANDO
+      <span *ngIf="currentIndex === 0" class="badge red-background">AO VIVO</span>
+      <span *ngIf="currentIndex !== 0" class="badge blue-background">FUTURO</span>
+    </p>
+    <div class="d-flex align-items-center justify-content-center">
+      <button class="arrow-btn btn btn-sm me-2" (click)="prevGame()">&lt;</button>
+      <div class="score-box px-4 py-2 bg-light rounded d-flex align-items-center">
+        <!-- Exibir os logos dos times ao lado dos nomes -->
+        <img [src]="currentGame.homeTeamLogo" alt="{{ currentGame.homeTeam }}" style="width: 50px; height: 50px; margin-right: 8px;">
+        <span>{{ currentGame.homeTeam }}</span>
+        <span class="mx-2">{{ currentGame.score }}</span>
+        <span>{{ currentGame.awayTeam }}</span>
+        <img [src]="currentGame.awayTeamLogo" alt="{{ currentGame.awayTeam }}" style="width: 50px; height: 50px; margin-left: 8px;">
+      </div>
+      <button class="arrow-btn btn btn-sm ms-2" (click)="nextGame()">&gt;</button>
+    </div>
+    <p>{{ currentGame.date | date: 'dd/MM/yyyy HH:mm' }}</p>
+  </div>
+
+  <!-- Botões de Ações -->
+  <div class="d-flex mb-3">
+    <button class="btn btn-dark me-2 w-50" (click)="openModal()">EU FUI!</button>
+    <button class="btn btn-warning w-50">ACESSE O INGRESSO</button>
+  </div>
+</div>
+
+<!-- Slide de Promoções e Eventos -->
+<footer class="w-100 bg-dark text-white text-center d-flex justify-content-center align-items-center" style="height: 80px;">
+  SLIDE DE PROMOÇÕES E EVENTOS
+</footer>
+
+<!-- Modal de Feedback -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100 text-center fw-bold" id="feedbackModalLabel">EU FUI!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Deixe sua avaliação sobre o jogo após você ter assistido! Queremos saber sua opinião e palpite de melhorias:</p>
+        <div class="d-flex justify-content-center mb-3">
+          <button class="btn w-80"><img src="assets/avaliacao-do-cliente 1" alt="Ruim" style=""></button>
+        </div>
+        <textarea class="form-control mb-2" placeholder="Faça um comentário..." rows="3"></textarea>
+        <small class="text-muted">Seu comentário ficará visível por 24 horas.</small>
+        <button class="btn btn-dark w-100 mt-3">ENVIAR</button>
+      </div>
+    </div>
+  </div>
+</div>
