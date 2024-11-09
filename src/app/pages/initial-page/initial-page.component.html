@@ -2,16 +2,22 @@
   <div class="overlay"></div>
   <div class="header">
     <img src="../../../assets/List.svg" alt="" class="img-fluid imgHamburguer float-end" (click)="toggleMenu()">
+
+  <div class="texto">
+    <h3>seja bem-vindo</h3>
   </div>
   <!-- Conteúdo do container-fluid -->
    <!-- Menu Lateral -->
   <div class="sidebar" [ngClass]="{'open': isMenuOpen}">
     <!-- Adicione conteúdo do menu aqui -->
-     <mat-icon class="float-end" (click)="closeMenu()">close</mat-icon>
     <ul class="list-unstyled">
       <li>Item 1</li>
       <li>Item 2</li>
       <li>Item 3</li>
     </ul>
   </div>
+
+</div>
+
+
 </div>

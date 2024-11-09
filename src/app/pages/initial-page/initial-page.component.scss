@@ -1,3 +1,5 @@
+
+
 .container-fluid{
   min-height: 100vh;
   background: #FFFFFF;
@@ -25,9 +27,15 @@
 
 .imgHamburguer{
   cursor: pointer;
-  width: 30px;
+  width: 45px;
+  height: 47px;
   justify-content: end;
+  position: fixed;
+  right: 4px;
+  top: 4px;
+  z-index: 99;
 }
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -36,7 +44,7 @@
   height: 100%;
   background-color: #2b2b2b;
   transition: right 0.3s ease; /* Transição suave para abrir/fechar */
-  z-index: 3;
+  z-index: 98;
   padding: 20px;
 }
 
@@ -53,4 +61,20 @@
   color: white;
   padding: 10px 0;
   cursor: pointer;
+}
+
+.mat-icon{
+  color: #FFFFFF;
+}
+
+.texto {
+  z-index: 3; /* Coloca o texto acima do menu e da sobreposição */
+  position: relative; /* Necessário para garantir que o z-index funcione */
+  margin-top: 20%; /* Ajuste para que o texto não fique colado no topo */
+  text-align: center;
+}
+
+.texto h3 {
+  color: #FFFFFF; /* Cor do texto */
+  font-size: 2rem; /* Ajuste do tamanho do texto */
 }
