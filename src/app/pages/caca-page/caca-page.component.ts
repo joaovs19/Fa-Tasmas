@@ -9,27 +9,32 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./caca-page.component.scss']
 })
 export class CacaPageComponent {
+  isMenuOpen = false;
+
+  toggleSidebar() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
   games = [
-    { 
-      homeTeam: 'NOV', 
-      awayTeam: 'OP', 
-      date: new Date('2024-11-09T17:00:00'), 
+    {
+      homeTeam: 'NOV',
+      awayTeam: 'OP',
+      date: new Date('2024-11-09T17:00:00'),
       score: '0 x 0',
       homeTeamLogo: 'assets/novorizontino.png', // URL do logo do Novorizontino
       awayTeamLogo: 'assets/operario.png'       // URL do logo do Operário
     },
-    { 
-      homeTeam: 'OP', 
-      awayTeam: 'MIR', 
-      date: new Date('2024-11-15T16:00:00'), 
+    {
+      homeTeam: 'OP',
+      awayTeam: 'MIR',
+      date: new Date('2024-11-15T16:00:00'),
       score: '0 x 0',
       homeTeamLogo: 'assets/operario.png',      // URL do logo do Operário
       awayTeamLogo: 'assets/mirassol-.png'         // URL do logo do Time D
     },
-    { 
-      homeTeam: 'CRB', 
-      awayTeam: 'OP', 
-      date: new Date('2024-11-24T16:00:00'), 
+    {
+      homeTeam: 'CRB',
+      awayTeam: 'OP',
+      date: new Date('2024-11-24T16:00:00'),
       score: '0 x 0',
       homeTeamLogo: 'assets/crb.png',        // URL do logo do Time E
       awayTeamLogo: 'assets/operario.png'         // URL do logo do Time F

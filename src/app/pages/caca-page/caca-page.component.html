@@ -26,7 +26,6 @@
     <div class="d-flex align-items-center justify-content-center">
       <button class="arrow-btn btn btn-sm me-2" (click)="prevGame()">&lt;</button>
       <div class="score-box px-4 py-2 bg-light rounded d-flex align-items-center">
-        <!-- Exibir os logos dos times ao lado dos nomes -->
         <img [src]="currentGame.homeTeamLogo" alt="{{ currentGame.homeTeam }}" style="width: 50px; height: 50px; margin-right: 8px;">
         <span>{{ currentGame.homeTeam }}</span>
         <span class="mx-2">{{ currentGame.score }}</span>

@@ -183,7 +183,12 @@ h2{
   font-size: 26px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   font-weight: 500;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 180px;
 }
+
+
 
 .conquistas{
   color: #000000;
@@ -251,7 +256,7 @@ h2{
   bottom: 0; /* Posiciona no fundo da página */
   left: 0;
   height: 180px; /* Define uma altura maior para o rodapé */
-  top: 670px;
+  top: 700px;
   z-index: 0;
 }
 

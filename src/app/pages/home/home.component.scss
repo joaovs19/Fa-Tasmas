@@ -77,7 +77,12 @@ a{
 .btn{
   background-color: #000000;
   color: #FFFFFF;
-  padding: 5px;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+button{
+  margin: 0 auto;
 }
 
 .help-icon {

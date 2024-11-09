@@ -9,5 +9,5 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  
 }
